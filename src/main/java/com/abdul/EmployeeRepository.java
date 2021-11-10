@@ -4,8 +4,6 @@ import javax.enterprise.context.ApplicationScoped;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.Scanner;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicLong;
 
 @ApplicationScoped
@@ -13,16 +11,7 @@ public class EmployeeRepository {
 
     private final AtomicLong id = new AtomicLong(0L);
 
-    private final List<Employee> employees = new ArrayList<Employee>()
-//    {
-//        {
-//            add(create("Abdul Rafiu", 55000));
-//            add(create("Mohsin Metlo", 55000));
-//            add(create("Haseeb Ansari", 55000));
-//            add(create("Hasnain Malik", 55000));
-//        }
-//    }
-    ;
+    private final List<Employee> employees = new ArrayList<Employee>();
 
     public Employee create(Employee employee) {
         employee.setEmpId(getNextEmpId());
